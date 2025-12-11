@@ -1,0 +1,25 @@
+{
+  "name": "jordaneb-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/generate.ts",
+    "dev": "npm run build && http-server dist -c-1",
+    "preview": "http-server dist -c-1",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
+    "nunjucks": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "http-server": "^14.1.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

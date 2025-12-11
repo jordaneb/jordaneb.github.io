@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.siteUrl }}{{ basePath }}/</link>
+    <description>{{ site.description }}</description>
+    <language>en-gb</language>
+    {% for post in posts %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>{{ site.siteUrl }}{{ post.url }}</link>
+      <guid>{{ site.siteUrl }}{{ post.url }}</guid>
+      <pubDate>{{ post.dateUtc }}</pubDate>
+      {% if post.description %}
+      <description><![CDATA[{{ post.description }}]]></description>
+      {% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

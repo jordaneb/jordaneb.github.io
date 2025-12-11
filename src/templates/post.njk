@@ -1,0 +1,31 @@
+{% extends "layout.njk" %}
+{% block content %}
+  <article class="post">
+    <header class="post-header">
+      <h1>{{ post.title }}</h1>
+      <div class="post-meta">
+        <time datetime="{{ post.dateIso }}">{{ post.dateLabel }}</time>
+        {% if post.tags.length %}
+          <span class="post-tags">
+            {% for tag in post.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </span>
+        {% endif %}
+      </div>
+      {% if post.audioUrl %}
+        <div class="post-audio">
+          <audio controls src="{{ post.audioUrl }}"></audio>
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ post.html | safe }}
+    </div>
+
+    <nav class="post-nav">
+      <a href="{{ basePath }}/">← Back</a>
+    </nav>
+  </article>
+{% endblock %}

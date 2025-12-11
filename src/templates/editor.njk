@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Write · {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ basePath }}/assets/style.css" />
+    <link rel="stylesheet" href="{{ basePath }}/assets/editor.css" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  </head>
+  <body class="editor-body">
+    <header class="site-header">
+      <div class="container header-row">
+        <div>
+          <a class="site-title" href="{{ basePath }}/">{{ site.title }}</a>
+          <div class="site-subtitle">{{ site.jobTitle }}</div>
+        </div>
+        <nav class="site-nav">
+          <a href="{{ basePath }}/">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="editor-container">
+      <div class="editor-toolbar">
+        <input id="filename" class="filename-input" type="text" value="new-post.md" />
+        <button id="download" class="toolbar-button" type="button">Download</button>
+        <label class="toolbar-button file-label">
+          Load
+          <input id="load-file" type="file" accept=".md,.markdown,text/markdown" />
+        </label>
+        <button id="clear" class="toolbar-button subtle" type="button">Clear</button>
+      </div>
+      <div class="editor-split">
+        <textarea id="editor" spellcheck="false" class="editor-input"></textarea>
+        <div id="preview" class="editor-preview"></div>
+      </div>
+    </main>
+
+    <script src="{{ basePath }}/assets/editor.js"></script>
+  </body>
+</html>
+

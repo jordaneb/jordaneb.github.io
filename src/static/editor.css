@@ -1,0 +1,26 @@
+.editor-preview h1,
+.editor-preview h2,
+.editor-preview h3 {
+  margin-top: 1.2rem;
+}
+
+.editor-preview pre {
+  background: #0b0b0b;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+.editor-preview code {
+  background: #f1f1f1;
+  padding: 0.15rem 0.35rem;
+  border-radius: 5px;
+  font-size: 0.95em;
+}
+
+.editor-preview pre code {
+  background: transparent;
+  padding: 0;
+}
+
