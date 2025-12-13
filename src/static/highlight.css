@@ -5,13 +5,14 @@
 
 .hljs-comment,
 .hljs-quote {
-  color: #94a3b8;
+  color: #6a737d;
+  font-style: italic;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-subst {
-  color: #7dd3fc;
+  font-weight: 700;
 }
 
 .hljs-string,
@@ -24,21 +25,15 @@
 .hljs-addition,
 .hljs-variable,
 .hljs-template-tag,
-.hljs-template-variable {
-  color: #fca5a5;
-}
-
+.hljs-template-variable,
 .hljs-number,
 .hljs-literal,
 .hljs-tag .hljs-attr,
-.hljs-tag .hljs-name {
-  color: #c4b5fd;
-}
-
+.hljs-tag .hljs-name,
 .hljs-section,
 .hljs-selector-id,
 .hljs-selector-class {
-  color: #fdba74;
+  color: inherit;
 }
 
 .hljs-emphasis {
@@ -48,4 +43,3 @@
 .hljs-strong {
   font-weight: 700;
 }
-

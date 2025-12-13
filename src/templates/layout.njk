@@ -9,40 +9,36 @@
     <link rel="stylesheet" href="{{ basePath }}/assets/highlight.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ basePath }}/rss.xml" />
   </head>
-  <body class="site-body">
-    <div class="notebook-frame">
-      <div class="notebook-paper">
-        <header class="site-header">
-          <div class="container header-row">
-            <div>
-              <a class="site-title" href="{{ basePath }}/">{{ site.title }}</a>
-              <div class="site-subtitle">{{ site.jobTitle }}</div>
-            </div>
-            <nav class="site-nav">
-              <a href="{{ basePath }}/">Home</a>
-              {% for page in pages %}
-                <a href="{{ page.url }}">{{ page.title }}</a>
-              {% endfor %}
-              {% if site.githubUrl %}
-                <a href="{{ site.githubUrl }}" target="_blank" rel="noreferrer">GitHub</a>
-              {% endif %}
-            </nav>
-          </div>
-        </header>
-
-        <main class="container">
-          {% block content %}{% endblock %}
-        </main>
-
-        <footer class="site-footer">
-          <div class="container footer-row">
-            <div>© {{ site.author }} {{ currentYear }}</div>
-            <div class="footer-links">
-              <a href="{{ basePath }}/rss.xml">RSS</a>
-            </div>
-          </div>
-        </footer>
+  <body>
+    <header class="site-header">
+      <div class="container header-row">
+        <div>
+          <a class="site-title" href="{{ basePath }}/">{{ site.title }}</a>
+          <div class="site-subtitle">{{ site.jobTitle }}</div>
+        </div>
+        <nav class="site-nav">
+          <a href="{{ basePath }}/">Home</a>
+          {% for page in pages %}
+            <a href="{{ page.url }}">{{ page.title }}</a>
+          {% endfor %}
+          {% if site.githubUrl %}
+            <a href="{{ site.githubUrl }}" target="_blank" rel="noreferrer">GitHub</a>
+          {% endif %}
+        </nav>
       </div>
-    </div>
+    </header>
+
+    <main class="container">
+      {% block content %}{% endblock %}
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <div>© {{ site.author }} {{ currentYear }}</div>
+        <div class="footer-links">
+          <a href="{{ basePath }}/rss.xml">RSS</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
